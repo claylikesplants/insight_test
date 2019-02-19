@@ -2,13 +2,7 @@
 # MAGIC %run "../helper_functions"
 
 # COMMAND ----------
-
-dayNum = spark.read.format("delta").load(dbutils.widgets.get("dayNum_table_path"))
-baseUsersCount = spark.read.format("delta").load(dbutils.widgets.get("baseUsersCount_table_path"))
-baseTable = spark.table(dbutils.widgets.get("baseTable_table_path"))
-baseGeoIncomeTagging = spark.read.format("delta").load(dbutils.widgets.get("baseGeoIncomeTagging_table_path"))
-income_order = spark.read.format("delta").load(dbutils.widgets.get("income_order_table_path"))
-comp_state_inc_metrics_path = dbutils.widgets.get("comp_state_inc_metrics_table_path")
+dgets.get("comp_state_inc_metrics_table_path")
 
 # dayNum =  spark.read.format("delta").load('dbfs:/mnt/mscience-dev/databases/insight/dayNum')
 # baseUsersCount = spark.read.format("delta").load('dbfs:/mnt/mscience-dev/databases/insight/baseUsersCount')
